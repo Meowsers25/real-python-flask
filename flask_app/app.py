@@ -35,6 +35,13 @@ def path_type(value):
     print(value)
     return "URL Path"
 
+@app.route("/name/<name>")
+def index(name):
+    if name.lower() == "chris":
+        return f"Hello, {name}", 200
+    else: 
+        return "Not found", 404
+    
 if __name__ == "__main__":
     # use run method to run app locally
     app.run()
