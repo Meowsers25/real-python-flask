@@ -4,6 +4,10 @@ from flask import Flask
 #  Instance of Flask class created, and assigned variable name app
 app = Flask(__name__)
 
+# error handling
+# don't need to restart server; just refresh page
+app.config["DEBUG"]=True
+
 # decorators to define 2 routes
 @app.route('/')
 @app.route('/hello')
